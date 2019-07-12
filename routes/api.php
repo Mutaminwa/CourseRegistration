@@ -25,3 +25,4 @@ Route::get('/course/edit/{id}', 'CourseController@edit');
 Route::post('/course/update/{id}', 'CourseController@update');
 Route::delete('/course/delete/{id}', 'CourseController@delete');
 Route::get('/courses', 'CourseController@index');
+Route::get('/user/login/{id}', 'CourseController@edit');

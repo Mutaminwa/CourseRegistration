@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-10"></div>
             <div class="col-md-2">
-                <router-link :to="{ name: 'create' }" class="btn btn-primary">Create Course</router-link>
+                <router-link :to="{ name: 'create' }" class="md-raised md-primary">Create Course</router-link>
             </div>
         </div><br />
 
@@ -24,8 +24,8 @@
                 <td>{{ course.id }}</td>
                 <td>{{ course.title }}</td>
                 <td>{{ course.body }}</td>
-                <td><router-link :to="{name: 'edit', params: { id: course.id }}" class="btn btn-primary">Edit</router-link></td>
-                <td><button class="btn btn-danger" @click.prevent="deleteCourse(course.id)">Delete</button></td>
+                <td><md-button class="md-raised md-primary" :to="{name: 'edit', params: { id: course.id }}"><router-link >Edit</router-link>Edit</md-button></td>
+                <td><button class="md-raised md-accent" @click.prevent="deleteCourse(course.id)">Delete</button></td>
             </tr>
             </tbody>
         </table>
