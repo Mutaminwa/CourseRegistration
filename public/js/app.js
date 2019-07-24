@@ -1889,6 +1889,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Reveal',
   data: function data() {
@@ -6687,7 +6690,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".md-app[data-v-f348271a] {\n  max-height: 900px;\n  border: 0px solid rgba(0, 0, 0, 0.12);\n}\n.md-drawer[data-v-f348271a] {\n  width: 230px;\n  max-width: calc(100vw - 125px);\n}", ""]);
+exports.push([module.i, ".md-app[data-v-f348271a] {\n  max-height: 900px;\n  border: 0px solid rgba(0, 0, 0, 0.12);\n}\n.md-drawer[data-v-f348271a] {\n  width: 230px;\n  max-width: calc(100vw - 125px);\n}\n.md-toolbar[data-v-f348271a] {\n  background-color: #2f164e;\n}", ""]);
 
 // exports
 
