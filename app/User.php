@@ -38,7 +38,13 @@ class User extends Authenticatable
     ];
     public function role()
     {
-        return $this->belongsTo(Roles::class);
+        return $this->belongsTo('App\Roles');
     }
+
+    public function userCourses()
+    {
+        return $this->belongsToMany('App\Course', 'UserCourses', 'UserID', 'CoursesID');
+    }
+
     protected $primaryKey = 'UserID';
 }

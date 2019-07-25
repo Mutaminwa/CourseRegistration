@@ -10,4 +10,12 @@ class Course extends Model
 
     protected $primaryKey = 'CourseID';
 
+    public function program()
+    {
+        return $this->belongsTo('App\Programs');
+    }
+    public function userCourses()
+    {
+        return $this->belongsToMany('App\User', 'UserCourses', 'UserID', 'CoursesID');
+    }
 }

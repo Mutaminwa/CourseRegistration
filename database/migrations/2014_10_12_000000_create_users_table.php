@@ -20,11 +20,13 @@ class CreateUsersTable extends Migration
             $table->string('Email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('Password');
-            $table->integer('RoleID')->unsigned()->index()->nullable();
-            $table->foreign('RoleID')->references('RoleID')->on('roles');
+            $table->integer('RoleID')->unsigned()->index();
             $table->string('api_token', 5);
             $table->rememberToken();
             $table->timestamps();
+        });
+        Schema::table('users', function($table) {
+            $table->foreign('RoleID')->references('RoleID')->on('roles');
         });
     }
 
