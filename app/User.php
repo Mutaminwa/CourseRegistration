@@ -38,6 +38,7 @@ class User extends Authenticatable
     ];
     public function role()
     {
-        return $this->belongsTo('App\Roles');
+        return $this->belongsTo(Roles::class);
     }
+    protected $primaryKey = 'UserID';
 }

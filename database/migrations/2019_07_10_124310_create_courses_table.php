@@ -16,6 +16,8 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->bigIncrements('CourseID');
             $table->integer('ProgramID')->nullable();
+            $table->integer('ProgramID')->unsigned()->index()->nullable();
+            $table->foreign('ProgramID')->references('ProgramID')->on('programs');
             $table->string('Name');
             $table->timestamps();
         });
