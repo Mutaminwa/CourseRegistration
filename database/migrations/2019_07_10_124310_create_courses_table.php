@@ -14,14 +14,14 @@ class CreateCoursesTable extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->bigIncrements('CourseID');
-            $table->integer('ProgramID')->unsigned()->index()->nullable();
+            $table->increments('CourseID');
             $table->string('Name');
             $table->timestamps();
+            $table->integer('ProgramID')->unsigned();
+            $table->foreign('ProgramID')->references('ProgramID')->on('programs')->onDelete('cascade');
+
         });
-        Schema::table('courses', function($table) {
-            $table->foreign('ProgramID')->references('ProgramID')->on('programs');
-        });
+
     }
 
     /**
