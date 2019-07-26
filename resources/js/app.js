@@ -21,6 +21,7 @@ import CreateComponent from './components/CreateComponent.vue';
 import IndexComponent from './components/IndexComponent.vue';
 import EditComponent from './components/EditComponent.vue';
 import LoginComponent from './components/LoginComponent.vue';
+import RegisterComponent from './components/RegisterComponent.vue';
 
 Vue.use(VueMaterial)
 const routes = [
@@ -43,6 +44,11 @@ const routes = [
         name: 'edit',
         path: '/edit/:id',
         component: EditComponent
+    },
+    {
+        name: 'register',
+        path: '/register',
+        component: RegisterComponent
     },
     {
         name: 'login',

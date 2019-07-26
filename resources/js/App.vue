@@ -26,6 +26,11 @@
                         <md-icon>list</md-icon>
                         <router-link >Courses</router-link>
                     </md-list-item>
+
+                    <md-list-item to="/register" exact>
+                        <md-icon>add</md-icon>
+                        <router-link >Register</router-link>
+                    </md-list-item>
                 </md-list>
             </md-app-drawer>
 
@@ -46,6 +51,9 @@
     .md-drawer {
         width: 230px;
         max-width: calc(100vw - 125px);
+    }
+    md-app-toolbar{
+        background-color: #f09593;
     }
 </style>
 
